@@ -1,0 +1,14 @@
+.shortsswiper{
+  margin-top: 40px;
+  height: 400px;
+  max-width: 100%;
+  width: 100%;
+  padding: 10px 10px;
+}
+.shortswiper-heading h2{
+  margin-bottom: 30px;
+  color: #000;
+  background-color: transparent;
+  font-size: 18px;
+  padding-left: 20px;
+}

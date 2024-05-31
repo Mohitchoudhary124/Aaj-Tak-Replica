@@ -1,0 +1,74 @@
+.sponser-sec{
+    display: flex;
+    flex-wrap: wrap;
+    /* height: 100px; */
+    width: 92%;
+    background-color: #002765;
+    /* margin: auto; */
+    margin-top: 100px;
+    margin-left: 4.2%;
+    margin-right: 5%;
+}
+.sponser-inner{
+    display: flex;
+}
+.sponser-inner h2{
+    font-size: 65px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    line-height: 72px;
+    margin-top: 12px;
+    margin-left: 20px;
+}
+.sponser-inner h3{
+    font-family: 'Anek Devanagari',sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+.presenting-sponser img{
+     height: auto;
+     width: 120px;
+}
+.presenting-sponser {
+    text-align: center;
+     margin-left: 30px;
+     margin-top: 8px;
+}
+.powered-by img{
+     height: auto;
+     width: 120px;
+}
+.powered-by{
+    text-align: center;
+     margin-left: 30px;
+     margin-top: 8px;
+}
+.co-poweredby img{
+     height: auto;
+     width: 120px;
+}
+.co-poweredby{
+    text-align: center;
+    margin-left: 30px;
+    margin-top: 8px;    
+}
+.associate-sponser {
+    display: flex;
+    flex-direction: column;
+     margin-left: 20px;
+     margin-top: 8px;
+     text-align: center;
+}
+.associate-img{
+    display: flex;
+    column-gap: 10px;
+}
+.associate-sponser img{
+    height: 50px;
+    width: 95px;
+}

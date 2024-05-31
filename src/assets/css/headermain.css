@@ -1,0 +1,52 @@
+.main-header{
+    height: 40px;
+    max-width: 100%;
+    width: 100%;
+    background-color: #002765;
+}
+.main-header, .header-list {
+    display: flex;
+}
+.main-logo img{
+    height: auto;
+    width: 130px;
+    padding-left: 12%;
+    margin-top: -20%;
+}
+
+.header-list ul,.header-list1{
+    display: flex;
+}
+.header-list, .header-list ul li{
+    list-style: none;
+    color: #ffffff;
+}
+/* {
+    margin-right: 15px;
+    padding: 4px 30px 6px 5px;
+} */
+
+.header-list ul li ,.header-list1 h3{
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 20px 0px 5px;
+    font-size: 16px;
+    font-weight: 400;
+    white-space: nowrap;
+    position: relative;
+}
+.header-list{
+    margin-left: 1%;
+}
+.header-list1{
+
+    padding-top: 3px;
+    margin-left: 5%;
+    margin-right: 25%;
+    padding: 5px 10px 0px 20px;
+}
+/* .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+    font-size: 1.9rem;
+    line-height: 1.75;
+    color: #ffffff;
+} */

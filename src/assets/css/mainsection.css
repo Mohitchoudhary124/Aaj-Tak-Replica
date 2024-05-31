@@ -1,0 +1,34 @@
+.main-sec-inner{
+   /* height: 1000px; */
+   width: 92%;
+   margin-top: 40px;
+   margin-left: 4.2%;
+}
+.main-sec-inner{
+    display: flex;
+}
+.main-sec-col1{
+    width: 28%;
+}
+.main-sec-col2{
+    width: 28%;
+}
+.main-sec-col3{
+    width: 21%;
+    background-color: tomato;
+}
+.main-sec-col4{
+    width: 23%;
+}
+.main-sec-col4-add img{
+    width: 100%;
+    margin: 10px 0px;
+}
+.main-sec-col4-add{
+    font-size: 11px;
+    line-height: 16px;
+    text-align: center;
+}
+.main-sec-col4-add span{
+    color: #878484;
+}
