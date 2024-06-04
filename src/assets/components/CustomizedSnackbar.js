@@ -25,10 +25,7 @@ export default function CustomizedSnackbar() {
   return (
     <div>
       {/* <Button onClick={handleClick}>Open Snackbar</Button> */}
-      <Snackbar open={open}  onClose={handleClose} anchorOrigin={{ vertical: 'top', horizontal: 'center' }}  sx={{
-          top: '500px','& .MuiSnackbarContent-root': {
-            width: '600px',
-          },}}>
+      <Snackbar open={open}  onClose={handleClose} style={{ position: 'fixed', top: '5%', marginTop: '50px', marginLeft: '220px', position:'relative',Width:'500px'}}  >
         <Alert
           onClose={handleClose}
           severity="success"

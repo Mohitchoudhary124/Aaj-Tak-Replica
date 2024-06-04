@@ -26,10 +26,19 @@ function Mainsection() {
                             <Newscardcol2/>
                             <Newscardcol2/>
                             <Newscardcol2/>
+                            <Newscardcol2/>
+                            <Newscardcol2/>
+                            <Newscardcol2/>
                         </div>
                     </div>
                     <div className='main-sec-col3'>
                         <div className='main-sec-col3-content-cards'>
+                            <Newscardcol3/>                            
+                            <Newscardcol3/>                            
+                            <Newscardcol3/>                            
+                            <Newscardcol3/>                            
+                            <Newscardcol3/>                            
+                            <Newscardcol3/>                            
                             <Newscardcol3/>                            
                             <Newscardcol3/>                            
                             <Newscardcol3/>                            
@@ -45,6 +54,9 @@ function Mainsection() {
                             <h3>Choose Magnite. Choose the Right SUV</h3>
                             </div>
                         <div className='main-sec-col4-video-carousal'><Shortsswiper/></div>
+                        <div className='main-sec-col4-t20-space'>
+                            <div><img src='assets/images/t-twenty.webp' alt=''/></div>
+                        </div>
                     </div>
                 </div>
             </div>

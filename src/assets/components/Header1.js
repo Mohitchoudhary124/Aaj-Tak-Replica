@@ -1,9 +1,18 @@
-import React from 'react'
+import React,{useState} from 'react'
 import '../css/header1.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown,faUser } from '@fortawesome/free-solid-svg-icons';
 
 function Header1() {
+        const [isRotated, setIsRotated] = useState(false);
+        const [isListVisible, setIsListVisible] = useState(false);
+      
+        const handleClick = () => {
+          setIsRotated(!isRotated);
+          setIsListVisible(!isListVisible);
+        };
+
+
   return (
     <section>
         <div>
@@ -25,12 +34,13 @@ function Header1() {
                             <li>Northeast</li>
                             <li>Malayalam</li>
                         </ul>
-                    <span className='more-list-icon'><FontAwesomeIcon icon={faChevronDown} /></span>
+                    <span className='more-list-icon' onClick={handleClick}><FontAwesomeIcon icon={faChevronDown} style={{ transform: isRotated ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease' }}/></span>
                     <div className='header1-signin'>
                         <h3>Sign In <FontAwesomeIcon icon={faUser} /></h3>
                     </div>
                     </div>
-                    <div className='content-list2'>
+                    {isListVisible && (
+                    <div className={`content-list2 ${isListVisible ? 'show-list' : ''}`}>
                     <ul>
                         <li>Sports Tak</li>
                         <li>Crime Tak</li>
@@ -40,6 +50,7 @@ function Header1() {
                         <li>Ishq FM</li>
                     </ul>
                     </div>
+                     )}
                 </div>
             </div>
         </div>

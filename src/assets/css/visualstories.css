@@ -1,0 +1,44 @@
+.owl-carousel .owl-item img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 180px;
+    width: 130px;
+} 
+.ovarlay {
+    text-align: center;
+}
+.slider-sec{
+    width: 72%;
+    max-width: 100%;
+    margin-left: 4%;
+   /* margin-right: auto; */
+}
+.slider1-inner{
+    display: flex;
+}
+.visual-stories-aside{
+    width:18%;
+    max-width: 100%;
+    z-index: 1;
+}
+.visual-stories-aside h4{
+    margin-left: 50px;
+    text-align: center;
+}
+.visual-stories-aside img{
+    width: 250px;
+    height: auto;
+    padding: 10px 0px 10px 18px  ;
+}
+.ovarlay{
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    padding: 2px;
+    text-align: center;
+}
+.slider1 h2 {
+    font-size: 16px;
+    margin: 20px;
+}

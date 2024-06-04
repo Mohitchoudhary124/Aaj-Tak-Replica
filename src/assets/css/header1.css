@@ -71,3 +71,11 @@
  .content-list2 ul{
     margin-left: 3%;
  }
+ .content-list2 {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .show-list {
+    max-height: 200px; /* Adjust the height as needed */
+  }

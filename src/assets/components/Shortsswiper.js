@@ -7,31 +7,31 @@ import '../css/shortswiper.css'
 
 function Shortswiper() {
     const options = {
-        stagePadding:80,
+        // stagePadding:80,
         loop: true,
-        margin: 10,
-        video:true,
-        nav: true,
-        dots:false,
-        items:1,
-        merge:true,
-        video:true,
+         margin: 10,
+         nav: true,
+         dots:false,
+         items:2,
+         merge:true,
+         video:true,
         lazyLoad:true,
         center:true,
+        // left:true,
         
-        autoplay:true,
-        autoplayTimeout:3000,
-        // responsive: {
-        //   0: {
-        //     items: 0.1,
-        //   },
-        //   600: {
-        //     items: 0.8,
-        //   },
-        //   1000: {
-        //     items: 1,
-        //   },
-        // },
+        // autoplay:true,
+        // autoplayTimeout:3000,
+        responsive: {
+          0: {
+            items: 0,
+          },
+          600: {
+            items: 1,
+          },
+          1000: {
+            items: 2,
+          },
+        },
       };
   return (
     <section>
@@ -41,24 +41,24 @@ function Shortswiper() {
                             <h2> शॉर्ट वीडियो </h2>
                         </div>
               <OwlCarousel className='owl-theme' {...options} >
-                <div className='shortsswiper-main'>
-                    <div class='item slider2item'>
-                        <div className='slider-inner'>
-                            <div className='slider-inner-content'>
-                                <div className='slider-content-top'>
-                                <a class="owl-video" href="https://www.youtube.com/watch?v=JpxsRwnRwCQ"></a>
-                                <h2>Petra Liebherr</h2>
-                                </div>
-                                <div className='slider-content-middle'>
-                                <h2>Wir schätzen</h2>
-                                </div>
-                            
-                                </div>
-                        </div>       
-                        </div>
+                 <div className='shortsswiper-main'>
+                       <div class='item shortsswiper-inner'>
+                            <div className='shortsswiper-inner-content'>
+                                   <div className='shortsswiper-logo-image'><img src='assets/images/aajtak-logo-fav.png'/></div>
+                                    <video width="140" height="120" controls>
+                                    <source src="assets/videos/03_jun_24_at_congress_hot_vo_mm_1024_512.mp4" type="video/mp4"/>                
+                                    Your browser does not support the video tag.
+                                    </video>
+                                    <div className='slider-content-middle'>
+                                        <h2>EXIT Poll</h2>
+                                        <h2> ने अडानी की सभी कंपनियों में भरा जोश, 15% से ज्यादा तक की तेजी...निवेशक गदगद!</h2>
+                                    </div>                            
+                            </div>
+                       </div>
+                    
             
     
-                     </div>
+                    </div>
                 </OwlCarousel>
             </div>
         </div>

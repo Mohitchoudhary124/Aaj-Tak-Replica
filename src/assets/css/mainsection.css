@@ -15,7 +15,6 @@
 }
 .main-sec-col3{
     width: 21%;
-    background-color: tomato;
 }
 .main-sec-col4{
     width: 23%;
@@ -31,4 +30,10 @@
 }
 .main-sec-col4-add span{
     color: #878484;
+}
+.main-sec-col4-t20-space img {
+    padding-top: 50px;
+    height: 250px;
+    width: 100%;
+    text-align: center;
 }
