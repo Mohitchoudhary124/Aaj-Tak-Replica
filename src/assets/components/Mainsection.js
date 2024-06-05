@@ -15,25 +15,26 @@ function Mainsection() {
                 <div className='main-sec-inner'>
                     <div className='main-sec-col1'>
                         <div className='main-sec-col1-card1'><Imagenewscol1/></div>
-                        <div className='main-sec-col1-card2'><Imagenewscol1/></div>
+                        {/* <div className='main-sec-col1-card2'><Imagenewscol1/></div> */}
                     </div>
                     <div className='main-sec-col2'>
                         <div className='main-sec-col2-video-player'><Videoplayermainsec/></div>
                         <div className='main-sec-col2-news-cards'>
                             <Newscardcol2/>
+                            {/* <Newscardcol2/>
                             <Newscardcol2/>
                             <Newscardcol2/>
                             <Newscardcol2/>
                             <Newscardcol2/>
                             <Newscardcol2/>
                             <Newscardcol2/>
-                            <Newscardcol2/>
-                            <Newscardcol2/>
+                            <Newscardcol2/> */}
                         </div>
                     </div>
                     <div className='main-sec-col3'>
                         <div className='main-sec-col3-content-cards'>
                             <Newscardcol3/>                            
+                            {/* <Newscardcol3/>                            
                             <Newscardcol3/>                            
                             <Newscardcol3/>                            
                             <Newscardcol3/>                            
@@ -42,8 +43,7 @@ function Mainsection() {
                             <Newscardcol3/>                            
                             <Newscardcol3/>                            
                             <Newscardcol3/>                            
-                            <Newscardcol3/>                            
-                            <Newscardcol3/>                            
+                            <Newscardcol3/>                             */}
                         </div>
                     </div>
                     <div className='main-sec-col4'>

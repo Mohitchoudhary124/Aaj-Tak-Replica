@@ -1,4 +1,5 @@
 import * as React from 'react';
+import  { useState, useEffect } from 'react';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -27,47 +28,81 @@ const ExpandMore = styled((props) => {
 }));
 
 export default function Imagenewscol1() {
-  const [expanded, setExpanded] = React.useState(false);
+   
+  const [expanded, setExpanded] = useState(false);
+  const [newsData, setNewsData] = useState(null);
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
+  useEffect(() => {
+    const fetchNewsData = async () => {
+      try {
+        const response = await fetch('https://newsapi.org/v2/top-headlines?country=in&apiKey=2aea1498ee4a40aca804d8e35b44b0ff');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        if (data.status === 'ok' && data.articles.length > 0) {
+          const limitedNewsData = data.articles.slice(0, 2);
+          setNewsData(limitedNewsData);
+          // Initialize expanded state for each card to false
+          const initialExpandedState = {};
+          limitedNewsData.forEach((_, index) => {
+            initialExpandedState[index] = false;
+          });
+          setExpanded(initialExpandedState);
+        } else {
+          throw new Error('No articles found');
+        }
+      } catch (error) {
+        console.error('There was a problem fetching news data:', error);
+      }
+    };
+
+    fetchNewsData();
+  }, []);
+
+  const handleExpandClick = (index) => {
+    setExpanded({ ...expanded, [index]: !expanded[index] });
   };
+ 
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardHeader
-        
-        title="Sex Scandal: प्रज्वल रेवन्ना के खिलाफ कितने केस हैं, क्या आरोप हैं और कौन सी धाराएं लगी हैं? सभी सवालों के जवाब"
-        
-      />
-      <CardMedia
-        component="img"
-        height="194"
-        image="assets/images/prajwal-revanna-310608872-16x9.avif"
-        alt="Paella dish"
-      />
-      <CardContent>
-        <Typography variant="body2" color="text.secondary">
-        दुष्कर्म और यौन शोषण का आरोपी प्रज्वल रेवन्ना जर्मनी से लौट आया है. अब यह सवाल पूछे जा रहे हैं कि अगर प्रज्वल रेवन्ना दोषी सिद्ध हो जाता है तो उसे कितनी सजा होगी. साथ ही रेवन्ना पर अब तक कितने...
-        </Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        
-        <ExpandMore
-          expand={expanded}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </ExpandMore>
-      </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography paragraph>Detailed news</Typography>
-          यौन शोषण और सेक्स स्कैंडल के आरोपों में घिरा जेडीएस से निष्कासित हासन सीट से सांसद प्रज्वल रेवन्ना भारत लौट आया है. 35 दिन बाद जर्मनी से लौटे रेवन्ना ... https://www.aajtak.in/india/news/story/prajwal-revanna-arrested-rape-accused-sections-punishment-provision-ntc-1955091-2024-05-31
-        </CardContent>
-      </Collapse>
+    <>
+     {newsData !== null && newsData.map((article, index) => (
+    <Card key={index} sx={{ maxWidth: 345 }}>
+      
+          <CardHeader title={article.title} />
+          <CardMedia component="img" height="194" image={article.urlToImage} alt={article.title} />
+          <CardContent>
+            <Typography variant="body2" color="text.secondary">
+              {article.description}
+            </Typography>
+          </CardContent>
+          <CardActions disableSpacing>
+            <IconButton
+              onClick={() => handleExpandClick(index)}
+              aria-expanded={expanded[index]}
+              aria-label="show more"
+            >
+              <ExpandMoreIcon />
+            </IconButton>
+          </CardActions>
+          <Collapse in={expanded[index]} timeout="auto" unmountOnExit>
+            <CardContent>
+              <Typography paragraph>{article.content}</Typography>
+              <Typography paragraph>Published At: {new Date(article.publishedAt).toLocaleString()}</Typography>
+              <Typography paragraph>
+                Source: {article.source.name}
+                {article.author && `, Author: ${article.author}`}
+              </Typography>
+              <Typography paragraph>
+                Read more: <a href={article.url} target="_blank" rel="noopener noreferrer">{article.url}</a>
+              </Typography>
+            </CardContent>
+          </Collapse>
+       
     </Card>
+      ))}
+    </>
+    
   );
 }
