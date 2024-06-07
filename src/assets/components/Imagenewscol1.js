@@ -35,7 +35,7 @@ export default function Imagenewscol1() {
   useEffect(() => {
     const fetchNewsData = async () => {
       try {
-        const response = await fetch('https://newsapi.org/v2/top-headlines?country=in&apiKey=2aea1498ee4a40aca804d8e35b44b0ff');
+        const response = await fetch('https://newsapi.org/v2/top-headlines?country=in&apiKey=3933af32437641f88e9017d3b08f51b3');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -71,7 +71,7 @@ export default function Imagenewscol1() {
     <Card key={index} sx={{ maxWidth: 345 }}>
       
           <CardHeader title={article.title} />
-          <CardMedia component="img" height="194" image={article.urlToImage} alt={article.title} />
+          <CardMedia component="img" height="194" image={article.urlToImage ||    'assets/images/image-not-available-download.png'} alt={article.title} />
           <CardContent>
             <Typography variant="body2" color="text.secondary">
               {article.description}

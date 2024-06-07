@@ -5,6 +5,25 @@ import Alert from '@mui/material/Alert';
 import { useState, useEffect } from 'react'
 
 export default function CustomizedSnackbar() {
+  
+  const [news, setNews] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://newsapi.org/v2/top-headlines?country=in&apiKey=3933af32437641f88e9017d3b08f51b3');
+        const data = await response.json();
+        setNews(data.articles);
+      } catch (error) {
+        console.error('Error fetching the news data', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+ 
+
+
   const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
@@ -24,17 +43,15 @@ export default function CustomizedSnackbar() {
 
   return (
     <div>
-      {/* <Button onClick={handleClick}>Open Snackbar</Button> */}
-      <Snackbar open={open}  onClose={handleClose} style={{ position: 'fixed', top: '5%', marginTop: '50px', marginLeft: '220px', position:'relative',maxWidth:'800px'}}  >
+      <Snackbar open={open}  onClose={handleClose} style={{ position: 'fixed', top: '5%', marginTop: '50px', marginLeft: '2%',marginRight:'2%', position:'relative',maxWidth:'90%',display:'flex',flexDirection:'row',textAlign:'center'}}    >
         <Alert
           onClose={handleClose}
           severity="success"
           variant="filled"
-          sx={{ width: '800px',bgcolor: '#d90000',
+          sx={{ width: 'auto',bgcolor: '#d90000',
           color: 'white',borderRadius:'30px' }}
-        >
-          BREAKING NEWS |
-अभिषेक दांगी की याचिका खारिज करने के पटना HC के आदेश में हस्तक्षेप करने से SC का इनकार
+        
+        >{news.slice(14, 15).map((article, index) => (<p>BREAKING NEWS | {article.title}</p>))}
         </Alert>
       </Snackbar>
     </div>

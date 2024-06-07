@@ -19,12 +19,12 @@ export default function TemporaryDrawer() {
   };
 
   const DrawerList = (
-    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+    <Box sx={{ width: 250, backgroundColor:"#032965",color:"white" }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+        {['वीडियो', 'बिजनेस', 'खेल', 'AI एंकर्स', 'विश्व', 'जुर्म'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
-              <ListItemIcon>
+              <ListItemIcon sx={{ color: 'white' }}>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />
@@ -34,12 +34,12 @@ export default function TemporaryDrawer() {
       </List>
       <Divider />
       <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+        {['टेक्नोलॉजी', 'डिफेंस न्यूज', 'एजुकेशन'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
-              <ListItemIcon>
+              <ListItemIcon sx={{ color: 'white' }}>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
+              </ListItemIcon >
               <ListItemText primary={text} />
             </ListItemButton>
           </ListItem>
@@ -50,7 +50,7 @@ export default function TemporaryDrawer() {
 
   return (
     <div>
-      <Button onClick={toggleDrawer(true)} style={{height:"42px",color:"white"}}>&#9776;</Button>
+      <Button onClick={toggleDrawer(true)} style={{height:"45px",color:"white"}}>&#9776;</Button>
       <Drawer open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
       </Drawer>

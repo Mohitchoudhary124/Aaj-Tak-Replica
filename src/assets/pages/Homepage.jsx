@@ -15,13 +15,13 @@ function Homepage() {
     <>
     <Header1/>
     <Headermain/>
-    <CustomizedSnackbar/>
+    {/* <CustomizedSnackbar/> */}
     <Sponserpartner/>
-    <Mainsection/>
+    {/* <Mainsection/> */}
     <Scrolltotop/>
     <Mainvideosection/>
-    <Visualstories/>
-    <Manoranjansection/>
+    {/* <Visualstories/> */}
+    {/* <Manoranjansection/> */}
     <Footer/>
     </>
   )

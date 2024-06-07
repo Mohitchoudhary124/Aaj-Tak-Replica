@@ -1,16 +1,35 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import '../css/headermain.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWind,faBell,faRadio,faTv,faMagnifyingGlass,faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import TemporaryDrawer from './Temporarydrawer';
 
 function Headermain() {
+
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
   return (
     <section>
         <div>
-            <div className='main-header'>
+            <div className={scrolled ? 'scrolled' : 'main-header'}>
                 <div className='main-header-drawer'><TemporaryDrawer/></div>
-                <div className='main-logo'><img src='assets/images/aajtak-logo-fav.png' alt=''/></div>
+                <div className={scrolled ? 'small-logo img' : 'main-logo img'}><img src='assets/images/aajtak-logo-fav.png' alt=''/></div>
                 <div className='header-list'>
                     <ul>
                         <li>होम</li>

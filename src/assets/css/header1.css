@@ -79,3 +79,49 @@
   .show-list {
     max-height: 200px; /* Adjust the height as needed */
   }
+
+
+
+  /* RESPONSIVE MEDIA QUERIES */
+
+  @media screen and (max-width: 1024px) {
+    .content-list1 ul li {
+        padding: 10px 8px 3px 0;
+    }
+    .content-list1 ul {
+        margin-left: 0.5%;
+    }
+    
+    .header1-signin{
+        margin-left: 1%;
+    }
+    .header-upper {
+        width: 1020px;
+        max-width: 100%;
+    }
+    .more-list-icon {
+        margin-left: 4%
+    }
+    
+  }
+  @media screen and (max-width: 824px) {
+    .content-list1 ul li {
+        padding: 10px 8px 3px 0;
+    }
+    .content-list1 ul {
+        overflow-x: scroll;
+        margin-left: 1%;
+    }
+    .content-list1 ul::-webkit-scrollbar {
+        height: 0;
+        width: 0; /* Hide scrollbar */
+      }
+    .header1-signin{
+        margin-left: 1%;
+    }
+    .header-upper {
+        width: 820px;
+        max-width: 100%;
+    }
+    
+  }

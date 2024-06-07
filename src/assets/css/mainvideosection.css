@@ -55,3 +55,26 @@
     margin-top: 15px;
     line-height: 24px;
 }
+
+/* RESPONSIVE MEDIA QUERY  */
+
+@media screen and (max-width: 1024px) {
+    .main-video-section {
+        height: auto;
+        width: 96%;
+        max-width: 100%;
+    }
+    .video-col2-r1 video {
+        width: 90%;
+    }
+    .video-col2-r1 p{
+        text-align: center;
+        width: 90%;
+    }
+    .video-col2-r1 h3 p{
+        text-align: center;
+    }
+    .video-col2-r1{
+        text-align: center;
+    }
+}

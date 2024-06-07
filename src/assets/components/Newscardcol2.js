@@ -13,7 +13,7 @@ export default function Newscardcol2() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=2aea1498ee4a40aca804d8e35b44b0ff');
+        const response = await fetch('https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=3933af32437641f88e9017d3b08f51b3');
         const data = await response.json();
         setNews(data.articles);
       } catch (error) {
@@ -34,7 +34,7 @@ export default function Newscardcol2() {
           <CardMedia
             component="img"
             height="60"
-            image={article.urlToImage || 'assets/images/placeholder-image.png'}
+            image={article.urlToImage ||    'assets/images/image-not-available-download.png'}
             alt={article.title}
             style={{ flex: '0 0 auto', width: 105 }}
           />

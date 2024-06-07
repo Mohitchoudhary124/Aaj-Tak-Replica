@@ -13,7 +13,7 @@ export default function Newscardcol3() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=2aea1498ee4a40aca804d8e35b44b0ff');
+        const response = await fetch('https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=3933af32437641f88e9017d3b08f51b3');
         const data = await response.json();
         setNews(data.articles);
       } catch (error) {
