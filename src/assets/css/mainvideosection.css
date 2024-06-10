@@ -78,3 +78,31 @@
         text-align: center;
     }
 }
+@media screen and (max-width: 820px) {
+    .video-col1-r1 video, .video-col1-r2 video {
+        width: 185px;
+    }
+    .video-col3-r1 video, .video-col3-r2 video {
+        width: 185px;
+    }
+}
+@media screen and (max-width: 430px) {
+    .main-video-section-inner {
+        flex-direction: column;
+    }
+    .main-video-sec-col1{
+        width: 100%;
+    }
+    
+    .main-video-sec-col2{
+        width: 100%;
+    }
+    
+    .main-video-sec-col3{
+        width: 100%;
+    }
+    
+.video-col1-r1, .video-col1-r2 {
+    padding: 10px 0px 10px 0px;
+}
+}

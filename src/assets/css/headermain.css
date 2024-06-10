@@ -51,6 +51,7 @@
     font-weight: 400;
     white-space: nowrap;
     position: relative;
+    cursor: pointer;
 }
 .header-list{
     margin-left: 1%;

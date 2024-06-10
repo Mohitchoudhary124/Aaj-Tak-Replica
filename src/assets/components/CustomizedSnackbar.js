@@ -43,7 +43,7 @@ export default function CustomizedSnackbar() {
 
   return (
     <div>
-      <Snackbar open={open}  onClose={handleClose} style={{ position: 'fixed', top: '5%', marginTop: '50px', marginLeft: '2%',marginRight:'2%', position:'relative',maxWidth:'90%',display:'flex',flexDirection:'row',textAlign:'center'}}    >
+      <Snackbar open={open}  onClose={handleClose} style={{ position: 'fixed', top: '5%', marginTop: '50px', marginLeft: 'auto',marginRight:'auto', position:'relative',maxWidth:'90%',display:'flex',flexDirection:'row',textAlign:'center'}}    >
         <Alert
           onClose={handleClose}
           severity="success"
