@@ -2,6 +2,8 @@ import React,{useState} from 'react'
 import '../css/header1.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown,faUser } from '@fortawesome/free-solid-svg-icons';
+import {NavLink } from "react-router-dom";
+
 
 function Header1() {
         const [isRotated, setIsRotated] = useState(false);
@@ -36,7 +38,8 @@ function Header1() {
                         </ul>
                     <span className='more-list-icon' onClick={handleClick}><FontAwesomeIcon icon={faChevronDown} style={{ transform: isRotated ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease' }}/></span>
                     <div className='header1-signin'>
-                        <h3>Sign In <FontAwesomeIcon icon={faUser} /></h3>
+                        <NavLink to='/Signup'><h3>Sign Up <FontAwesomeIcon icon={faUser} /></h3></NavLink>
+                        
                     </div>
                     </div>
                     {isListVisible && (

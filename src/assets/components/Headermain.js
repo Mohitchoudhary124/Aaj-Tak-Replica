@@ -38,8 +38,6 @@ function Headermain() {
                         <li>मनोरंजन <FontAwesomeIcon icon={faChevronDown} /></li>
                         <li>खेल <FontAwesomeIcon icon={faChevronDown} /></li>
                         <li>धर्म <FontAwesomeIcon icon={faChevronDown} /></li>
-                        <li>लाइफस्टाइल <FontAwesomeIcon icon={faChevronDown} /></li>
-                        <li>वेब स्टोरी <FontAwesomeIcon icon={faChevronDown} /></li>
                     </ul>
                 <div className='header-list1'>
                     <div className='lang-edition'><h3>EDITION <span><img src='' alt=''/> IN <FontAwesomeIcon icon={faChevronDown} /></span></h3></div>

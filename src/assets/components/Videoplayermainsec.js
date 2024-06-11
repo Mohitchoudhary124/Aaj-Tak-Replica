@@ -12,7 +12,7 @@ export default function Videoplayermainsec() {
       sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', p: 0, m: 0 }}
     >
      
-      <Card component="li" sx={{ minWidth: 'auto', flexGrow: 1 }}>
+      <Card component="li" sx={{ Width: '90%', flexGrow: 1 }}>
         <CardCover>
           <video
             autoPlay

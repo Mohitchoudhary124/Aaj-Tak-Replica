@@ -50,7 +50,7 @@ export default function TemporaryDrawer() {
 
   return (
     <div>
-      <Button onClick={toggleDrawer(true)} style={{height:"45px",color:"white"}}>&#9776;</Button>
+      <Button onClick={toggleDrawer(true)} style={{height:"45px",color:"white",padding:"15px 0px"}}>&#9776;</Button>
       <Drawer open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
       </Drawer>

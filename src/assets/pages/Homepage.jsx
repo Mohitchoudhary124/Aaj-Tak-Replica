@@ -9,6 +9,7 @@ import Mainvideosection from '../components/Mainvideosection'
 import Visualstories from '../components/Visualstories'
 import Manoranjansection from '../components/Manoranjansection'
 import Footer from '../components/Footer'
+import AdComponent from '../components/Adcomponent'
 
 function Homepage() {
   return (
@@ -22,6 +23,7 @@ function Homepage() {
     <Mainvideosection/>
     <Visualstories/>
     <Manoranjansection/>
+    <AdComponent/>
     <Footer/>
     </>
   )

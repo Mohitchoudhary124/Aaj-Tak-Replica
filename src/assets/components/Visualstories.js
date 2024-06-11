@@ -6,10 +6,9 @@ import '../css/visualstories.css'
 
 
 const options = {
-    // stagePadding:90,
     loop: true,
     margin: 30,
-    nav: true,
+    nav: false,
     dots:false,
     autoplay:false,
     autoplayTimeout:2000,
@@ -22,7 +21,7 @@ const options = {
         items: 5,
       },
       1000: {
-        items: 5,
+        items: 6,
       },
     },
    };

@@ -1,13 +1,14 @@
 .owl-carousel .owl-item img {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    height: 180px;
+    height: 150px;
     width: 130px;
 } 
 .ovarlay {
     text-align: center;
 }
 .slider-sec{
+    height: 350px;
     width: 72%;
     max-width: 100%;
     margin-left: 4%;
@@ -42,6 +43,29 @@
     font-size: 16px;
     margin: 20px;
 }
+.owl-nav button span{
+    font-size: 50px;
+    margin-top: -30px;
+}
+.slider1-inner {
+    position: relative;
+}
+
+.owl-theme .owl-nav {
+    margin-top: -190px;
+}
+.owl-nav button {
+    position: absolute;
+}
+.owl-prev{
+    top: 40%;
+    left: 0%;
+}
+.owl-next{
+    top: 40%;
+    right: 0px;
+}
+
 
 /* RESPONSIVE DESIGN MEDIA QUERY */
 
@@ -50,6 +74,9 @@
         height: 160px;
         width: 115px;
     } 
+    .slider-sec{
+    height: 400px;
+    }
     .ovarlay {
         margin-top: 5px;
         font-size: 12px;
@@ -88,6 +115,7 @@
         flex-direction: column;
     }
     .slider-sec{
+        height: 470px;
         width: 100%;
         max-width: 100%;
         margin-left: 2%;
