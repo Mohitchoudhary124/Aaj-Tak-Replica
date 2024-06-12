@@ -10,6 +10,7 @@ import Visualstories from '../components/Visualstories'
 import Manoranjansection from '../components/Manoranjansection'
 import Footer from '../components/Footer'
 import AdComponent from '../components/Adcomponent'
+import Chatbot from '../components/Chatbot'
 
 function Homepage() {
   return (
@@ -23,6 +24,7 @@ function Homepage() {
     <Mainvideosection/>
     <Visualstories/>
     <Manoranjansection/>
+    <Chatbot/>
     <AdComponent/>
     <Footer/>
     </>

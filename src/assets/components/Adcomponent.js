@@ -28,6 +28,7 @@ const AdComponent = () => {
         data-ad-client="ca-pub-3940256099942544"
         data-ad-slot="6300978111"
         data-ad-format="auto"
+        data-adtest="on"
         data-full-width-responsive="true"></ins>
     </div>
   );

@@ -56,7 +56,7 @@ function Slidersection() {
           <div className="item">
           {news.slice(10, 11).map((article, index) => (
                         <>
-                        <img src={article.urlToImage ||    'assets/images/image-not-available-download.png'} className="owl-item-img"/>
+                        <img src={article.urlToImage ||    'assets/images/image-not-available-download.png'} className="owl-item-img" alt=''/>
                         <p className='ovarlay'>{article.title}</p>
                         </>
                     ))}
@@ -64,7 +64,7 @@ function Slidersection() {
           <div className="item">
           {news.slice(11, 12).map((article, index) => (
                         <>
-                        <img src={article.urlToImage ||    'assets/images/image-not-available-download.png'} className="owl-item-img"/>
+                        <img src={article.urlToImage ||    'assets/images/image-not-available-download.png'} className="owl-item-img" alt=''/>
                         <p className='ovarlay'>{article.title}</p>
                         </>
                     ))}           
@@ -72,7 +72,7 @@ function Slidersection() {
           <div className="item">
           {news.slice(12, 13).map((article, index) => (
                         <>
-                        <img src={article.urlToImage ||    'assets/images/image-not-available-download.png'} className="owl-item-img"/>
+                        <img src={article.urlToImage ||    'assets/images/image-not-available-download.png'} className="owl-item-img" alt=''/>
                         <p className='ovarlay'>{article.title}</p>
                         </>
                     ))}      
@@ -80,7 +80,7 @@ function Slidersection() {
           <div className="item">
           {news.slice(13, 14).map((article, index) => (
                         <>
-                        <img src={article.urlToImage ||    'assets/images/image-not-available-download.png'} className="owl-item-img"/>
+                        <img src={article.urlToImage ||    'assets/images/image-not-available-download.png'} className="owl-item-img" alt=''/>
                         <p className='ovarlay'>{article.title}</p>
                         </>
                     ))}           
@@ -88,7 +88,7 @@ function Slidersection() {
           <div className="item">
           {news.slice(14, 15).map((article, index) => (
                         <>
-                        <img src={article.urlToImage ||    'assets/images/image-not-available-download.png'} className="owl-item-img"/>
+                        <img src={article.urlToImage ||    'assets/images/image-not-available-download.png'} className="owl-item-img" alt=''/>
                         <p className='ovarlay'>{article.title}</p>
                         </>
                     ))}        
@@ -96,7 +96,7 @@ function Slidersection() {
           <div className="item">
           {news.slice(15, 16).map((article, index) => (
                         <>
-                        <img src={article.urlToImage ||    'assets/images/image-not-available-download.png'} className="owl-item-img"/>
+                        <img src={article.urlToImage ||    'assets/images/image-not-available-download.png'} className="owl-item-img" alt=''/>
                         <p className='ovarlay'>{article.title}</p>
                         </>
                     ))}           
@@ -104,7 +104,7 @@ function Slidersection() {
           <div className="item">
           {news.slice(16, 17).map((article, index) => (
                         <>
-                        <img src={article.urlToImage ||    'assets/images/image-not-available-download.png'} className="owl-item-img"/>
+                        <img src={article.urlToImage ||    'assets/images/image-not-available-download.png'} className="owl-item-img" alt=''/>
                         <p className='ovarlay'>{article.title}</p>
                         </>
                     ))}           
@@ -112,7 +112,7 @@ function Slidersection() {
           <div className="item">
           {news.slice(17, 18).map((article, index) => (
                         <>
-                        <img src={article.urlToImage ||    'assets/images/image-not-available-download.png'} className="owl-item-img"/>
+                        <img src={article.urlToImage ||    'assets/images/image-not-available-download.png'} className="owl-item-img" alt=''/>
                         <p className='ovarlay'>{article.title}</p>
                         </>
                     ))}          
